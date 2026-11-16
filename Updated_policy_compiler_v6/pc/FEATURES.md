@@ -59,3 +59,32 @@ The generated file is still a single standalone C++ file. It contains the compil
 ## v4 additions (dashboard)
 * **Batch test runner** (`--json --batch FILE`, `/api/batch`, dashboard page "Batch test runner"): builds 100-200 labelled password cases (`testgen.py`, seeded so runs repeat), plus optional custom passwords, evaluates them against a policy in one engine run, and draws entropy charts (per case, histogram, per category). Reports weak passwords that were accepted and strong ones that were rejected. CSV export included.
 * **Vulnerabilities page** (`vulns.json`, `/api/vulns`, `/api/vulncheck`): 10 findings from a security review, each with location, impact and fix. "Run live verification" reproduces 7 of them safely against the real build (generated code is parsed, never executed).
+
+
+## Password Security Workspace
+
+### New Features
+
+- Dark-themed password security interface.
+- Live password strength preview.
+- Password visibility toggle.
+- Real-time validation checklist.
+- C++ based password evaluation.
+- Neuro-symbolic password strength analysis.
+- Agentic AI security workflow with six stages.
+- Password pattern and vulnerability detection.
+- Dynamic risk scoring.
+- Automated security recommendations.
+- Generated code security scanning.
+- Policy integrity and drift verification.
+
+### Agentic AI Workflow
+
+1. Agentic Lexer: Detects obfuscation, Unicode tricks and suspicious input.
+2. Agentic Parser: Repairs supported syntax errors.
+3. Logic Reasoning Agent: Checks policy constraints and feasibility.
+4. Red-Team Agent: Analyses possible password attacks and policy weaknesses.
+5. Code Synthesis Agent: Generates and scans validation artifacts.
+6. Defense Advisor: Evaluates password strength and recommends security actions.
+
+The system uses the existing C++ neuro-symbolic engine and deterministic security rules. It does not require an external LLM API.
