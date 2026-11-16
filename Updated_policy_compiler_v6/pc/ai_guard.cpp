@@ -363,12 +363,40 @@ std::string analyzeJson(const std::string& source, const std::string& user, cons
     logAttack("output", out, tg.pythonCode); logAttack("drift", drift, healed);
     j += ",\"output_scan\":" + verdictJson(out) + ",\"drift_check\":" + verdictJson(drift) + ",\"hmac\":" + q(tg.hmacSignature);
 
-    if (!password.empty()) {
-        auto ev = pwrt::evaluate(password, ir.p, user); auto d = AgenticCompilerEngine::adviseDefense(ev, ir.p);
-        std::vector<std::string> viol; for (auto& v : ev.violations) viol.push_back("[" + v.rule + "] " + v.message);
-        j += ",\"password\":{\"valid\":" + std::string(ev.valid ? "true" : "false") + ",\"user_check_skipped\":" + (ev.userCheckSkipped ? "true" : "false") + ",\"score\":" + std::to_string(ev.strength.score) + ",\"bits\":" + num(ev.strength.bits, 1) +
-             ",\"violations\":" + strArr(viol) + ",\"findings\":" + strArr(ev.strength.findings) + ",\"riskTier\":" + q(d.riskTier) + ",\"riskScore\":" + num(d.dynamicRiskScore, 2) + ",\"actions\":" + strArr(d.recommendedActions) + "}";
+    
+if (!password.empty()) {
+    auto ev = pwrt::evaluate(password, ir.p, user);
+    auto d = AgenticCompilerEngine::adviseDefense(ev, ir.p);
+
+    std::vector<std::string> viol;
+
+    for (auto& v : ev.violations) {
+        viol.push_back("[" + v.rule + "] " + v.message);
     }
+
+    j += ",\"password\":{\"valid\":" +
+         std::string(ev.valid ? "true" : "false") +
+
+         ",\"user_check_skipped\":" +
+         (ev.userCheckSkipped ? "true" : "false") +
+
+         ",\"score\":" + std::to_string(ev.strength.score) +
+
+         ",\"bits\":" + num(ev.strength.bits, 1) +
+
+         ",\"violations\":" + strArr(viol) +
+
+         ",\"findings\":" + strArr(ev.strength.findings) +
+
+         ",\"suggestions\":" + strArr(ev.strength.suggestions) +
+
+         ",\"riskTier\":" + q(d.riskTier) +
+
+         ",\"riskScore\":" + num(d.dynamicRiskScore, 2) +
+
+         ",\"actions\":" + strArr(d.recommendedActions) + "}";
+}
+
     return j + "}";
 }
 
