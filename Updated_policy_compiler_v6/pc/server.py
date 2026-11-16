@@ -132,16 +132,83 @@ class H(BaseHTTPRequestHandler):
         try: return self._analyze() if self.path == "/api/analyze" else self._batch()
         except Exception as e: return self._send(200, json.dumps({"error": str(e)}))
     def _analyze(self):
-        d = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
-        src = d.get("policy", "")[:65000]
-        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, dir=HERE, encoding="utf-8") as f:
-            f.write(src); tmp = f.name
-        try:
-            args = [tmp, "--json"] + (["--user", d["user"]] if d.get("user") else [])
-            pw = d.get("password", "")
-            if pw: args.append("--pw-stdin")
-            self._send(200, run(args, pw.replace("\n", "") + "\n" if pw else ""))
-        finally: os.unlink(tmp)
+        
+def _analyze(self):
+    # Limit request size to prevent oversized requests
+    try:
+        n = int(self.headers.get("Content-Length", 0))
+    except ValueError:
+        return self._send(400, json.dumps({
+            "error": "Invalid request size"
+        }))
+
+    if n <= 0 or n > 100000:
+        return self._send(413, json.dumps({
+            "error": "Request too large or empty"
+        }))
+
+    try:
+        d = json.loads(self.rfile.read(n) or b"{}")
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return self._send(400, json.dumps({
+            "error": "Invalid JSON request"
+        }))
+
+    if not isinstance(d, dict):
+        return self._send(400, json.dumps({
+            "error": "Expected a JSON object"
+        }))
+
+    src = d.get("policy", "")
+    pw = d.get("password", "")
+    user = d.get("user", "")
+
+    if not all(isinstance(x, str) for x in (src, pw, user)):
+        return self._send(400, json.dumps({
+            "error": "Policy, password and username must be strings"
+        }))
+
+    if len(src.encode("utf-8")) > 65000:
+        return self._send(413, json.dumps({
+            "error": "Policy is too large"
+        }))
+
+    if len(pw.encode("utf-8")) > 4096:
+        return self._send(413, json.dumps({
+            "error": "Password exceeds the allowed size"
+        }))
+
+    # Save policy temporarily
+    with tempfile.NamedTemporaryFile(
+        "w",
+        suffix=".txt",
+        delete=False,
+        dir=HERE,
+        encoding="utf-8"
+    ) as f:
+        f.write(src)
+        tmp = f.name
+
+    try:
+        args = [tmp, "--json"]
+
+        if user:
+            args.extend(["--user", user[:128]])
+
+        if pw:
+            args.append("--pw-stdin")
+
+        # Password travels through stdin, not command-line arguments
+        password_input = pw.replace("\n", "") + "\n" if pw else ""
+
+        result = run(args, password_input)
+
+        self._send(200, result)
+
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+
     def _batch(self):
         n = int(self.headers.get("Content-Length", 0))
         if n < 0 or n > 400000: return self._send(200, json.dumps({"error": "request body too large"}))
