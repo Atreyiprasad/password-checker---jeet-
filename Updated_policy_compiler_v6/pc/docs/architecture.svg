@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 860" width="1700" height="860" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#475569"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#0f766e"/></marker>
+<marker id="y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0L10,5L0,10z" fill="#b45309"/></marker>
+<marker id="as" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M10,0L0,5L10,10z" fill="#475569"/></marker>
+<filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1b2438" flood-opacity=".08"/></filter>
+</defs>
+<rect width="1700" height="860" fill="#f8fafc"/>
+<text x="60" y="52.0" font-size="28" fill="#1b2438" font-weight="700" text-anchor="start">Agentic Policy Compiler</text>
+<text x="60" y="78.0" font-size="15" fill="#64748b" font-weight="400" text-anchor="start">System architecture: a password-policy compiler wrapped in an AI security guard</text>
+<g filter="url(#sh)">
+<rect x="60" y="110" width="300" height="70" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="520" y="110" width="300" height="70" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+</g>
+<text x="210" y="140.0" font-size="16" fill="#1b2438" font-weight="650" text-anchor="middle">Web console</text>
+<text x="210" y="160.0" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">index.html dashboard</text>
+<text x="670" y="140.0" font-size="16" fill="#1b2438" font-weight="650" text-anchor="middle">Local bridge</text>
+<text x="670" y="160.0" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">server.py (HTTP API)</text>
+<polyline points="360,145 520,145" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" marker-start="url(#as)" stroke-linejoin="round"/>
+<text x="440" y="136.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="middle">HTTP</text>
+<polyline points="820,145 900,145 900,236" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<text x="915" y="200.0" font-size="12" fill="#64748b" font-weight="400" text-anchor="start">runs CLI,</text>
+<text x="915" y="216.0" font-size="12" fill="#64748b" font-weight="400" text-anchor="start">returns JSON</text>
+<rect x="40" y="230" width="1620" height="590" rx="18" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="64" y="258.0" font-size="14" fill="#334155" font-weight="600" text-anchor="start">C++ engine  ·  policy_compiler --json</text>
+<g filter="url(#sh)">
+<rect x="64" y="300" width="150" height="120" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+<rect x="250" y="300" width="170" height="120" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+<rect x="456" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="598" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="740" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="882" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="1024" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="1166" y="300" width="126" height="120" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.5"/>
+<rect x="1360" y="300" width="276" height="250" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+</g>
+<text x="139" y="326.0" font-size="15" fill="#1b2438" font-weight="650" text-anchor="middle">Input</text>
+<text x="139" y="352.0" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">Policy file or</text>
+<text x="139" y="368.9" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">agent prompt</text>
+<text x="139" y="385.8" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">+ username,</text>
+<text x="139" y="402.6" font-size="12.5" fill="#64748b" font-weight="400" text-anchor="middle">test password</text>
+<text x="335" y="326.0" font-size="15" fill="#0f766e" font-weight="650" text-anchor="middle">AI Guard</text>
+<text x="335" y="346.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="middle">Input scan</text>
+<text x="335" y="368.0" font-size="12" fill="#475569" font-weight="400" text-anchor="middle">prompt injection,</text>
+<text x="335" y="384.2" font-size="12" fill="#475569" font-weight="400" text-anchor="middle">bypass, obfuscation</text>
+<text x="335" y="408.0" font-size="10.5" fill="#0f766e" font-weight="650" text-anchor="middle">ALLOW · WARN · BLOCK</text>
+<circle cx="519.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="519.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">1</text>
+<text x="519.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">Lexer</text>
+<text x="519.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">Threat sanitizer,</text>
+<text x="519.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">hidden-char scan</text>
+<circle cx="661.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="661.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">2</text>
+<text x="661.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">Parser</text>
+<text x="661.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">Self-healing</text>
+<text x="661.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">grammar, builds AST</text>
+<circle cx="803.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="803.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">3</text>
+<text x="803.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">Semantic</text>
+<text x="803.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">SAT-style prover,</text>
+<text x="803.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">finds contradictions</text>
+<circle cx="945.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="945.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">4</text>
+<text x="945.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">IR Analyzer</text>
+<text x="945.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">Quality score,</text>
+<text x="945.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">red-team crack time</text>
+<circle cx="1087.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="1087.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">5</text>
+<text x="1087.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">Code Generator</text>
+<text x="1087.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">C++, Python, TS,</text>
+<text x="1087.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">JSON + HMAC seal</text>
+<circle cx="1229.0" cy="324" r="12" fill="#4f46e5"/>
+<text x="1229.0" y="328.5" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">6</text>
+<text x="1229.0" y="358.0" font-size="14" fill="#1b2438" font-weight="650" text-anchor="middle">Runtime</text>
+<text x="1229.0" y="380.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">Neuro-symbolic</text>
+<text x="1229.0" y="395.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">checker, defense tips</text>
+<text x="1498" y="326.0" font-size="15" fill="#1b2438" font-weight="650" text-anchor="middle">Outputs</text>
+<circle cx="1384" cy="352" r="3.5" fill="#4f46e5"/>
+<text x="1398" y="356.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="start">Compiled policy</text>
+<text x="1398" y="371.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">+ SHA-256 fingerprint</text>
+<circle cx="1384" cy="390" r="3.5" fill="#4f46e5"/>
+<text x="1398" y="394.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="start">Validator code</text>
+<text x="1398" y="409.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">C++ / Python / TypeScript</text>
+<circle cx="1384" cy="428" r="3.5" fill="#4f46e5"/>
+<text x="1398" y="432.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="start">Quality &amp; compliance</text>
+<text x="1398" y="447.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">NIST, OWASP, PCI-DSS</text>
+<circle cx="1384" cy="466" r="3.5" fill="#4f46e5"/>
+<text x="1398" y="470.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="start">Red-team report</text>
+<text x="1398" y="485.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">crack-time per algorithm</text>
+<circle cx="1384" cy="504" r="3.5" fill="#4f46e5"/>
+<text x="1398" y="508.0" font-size="13" fill="#1b2438" font-weight="600" text-anchor="start">Password verdict</text>
+<text x="1398" y="523.0" font-size="11.5" fill="#64748b" font-weight="400" text-anchor="start">strength + violations</text>
+<polyline points="214,360 250,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="420,360 456,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="582,360 598,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="724,360 740,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="866,360 882,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="1008,360 1024,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="1150,360 1166,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<polyline points="1292,360 1360,360" fill="none" stroke="#475569" stroke-width="2"  marker-end="url(#a)" stroke-linejoin="round"/>
+<g filter="url(#sh)">
+<rect x="556.0" y="500" width="210" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+<rect x="972.0" y="500" width="230" height="74" rx="12" fill="#ecfdf5" stroke="#0f766e" stroke-width="1.5"/>
+</g>
+<text x="661.0" y="526.0" font-size="13.5" fill="#0f766e" font-weight="650" text-anchor="middle">AI Guard: drift check</text>
+<text x="661.0" y="546.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">healed policy must not</text>
+<text x="661.0" y="561.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">weaken the original</text>
+<text x="1087.0" y="526.0" font-size="13.5" fill="#0f766e" font-weight="650" text-anchor="middle">AI Guard: output scan</text>
+<text x="1087.0" y="546.0" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">generated Python / TS must</text>
+<text x="1087.0" y="561.5" font-size="11.5" fill="#475569" font-weight="400" text-anchor="middle">contain no malicious code</text>
+<polyline points="661.0,420 661.0,500" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="5 4"  marker-end="url(#g)" stroke-linejoin="round"/>
+<polyline points="1087.0,420 1087.0,500" fill="none" stroke="#0f766e" stroke-width="2" stroke-dasharray="5 4"  marker-end="url(#g)" stroke-linejoin="round"/>
+<g filter="url(#sh)">
+<rect x="953.0" y="672" width="300" height="70" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="1.5"/>
+</g>
+<text x="1103.0" y="700.0" font-size="15" fill="#b45309" font-weight="650" text-anchor="middle">Attack log</text>
+<text x="1103.0" y="720.0" font-size="12" fill="#475569" font-weight="400" text-anchor="middle">attacks.log: every WARN / BLOCK event</text>
+<polyline points="335,420 335,707 953.0,707" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4"  marker-end="url(#y)" stroke-linejoin="round"/>
+<polyline points="661.0,574 661.0,620 1103.0,620 1103.0,672" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4"  marker-end="url(#y)" stroke-linejoin="round"/>
+<polyline points="1087.0,574 1087.0,620 1103.0,620" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4"  stroke-linejoin="round"/>
+<g filter="url(#sh)">
+<rect x="1420" y="672" width="216" height="70" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+</g>
+<text x="1528" y="700.0" font-size="15" fill="#1b2438" font-weight="650" text-anchor="middle">Attack simulation</text>
+<text x="1528" y="720.0" font-size="12" fill="#475569" font-weight="400" text-anchor="middle">precision, recall, F1</text>
+<polyline points="1420,707 1253.0,707" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="5 4"  marker-end="url(#a)" stroke-linejoin="round"/>
+<line x1="64" y1="790" x2="104" y2="790" stroke="#475569" stroke-width="2" marker-end="url(#a)"/>
+<text x="114" y="794.0" font-size="12" fill="#475569" font-weight="400" text-anchor="start">data flow</text>
+<line x1="204" y1="790" x2="244" y2="790" stroke="#0f766e" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="254" y="794.0" font-size="12" fill="#475569" font-weight="400" text-anchor="start">guard check</text>
+<line x1="364" y1="790" x2="404" y2="790" stroke="#b45309" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="414" y="794.0" font-size="12" fill="#475569" font-weight="400" text-anchor="start">logged</text>
+</svg>

@@ -1,0 +1,13 @@
+# Auto-suggested by:  policy_compiler samples/policy_original.txt --harden out.txt
+minLength 12
+maxLength 64
+requireUpper true
+requireLower true
+requireDigit true
+maxRepeat 3
+maxSequence 3
+minEntropy 50
+blockCommon true
+noKeyboardPatterns true
+noRepeatedBlocks true
+noUserInfo true

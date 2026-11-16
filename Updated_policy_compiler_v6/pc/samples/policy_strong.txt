@@ -1,0 +1,17 @@
+# a serious policy
+minLength 12
+maxLength 64
+minUpper 2
+requireLower true
+requireDigit true
+requireSpecial true
+maxRepeat 2
+maxSequence 3
+minUnique 6
+minEntropy 55
+blockCommon true
+noKeyboardPatterns true
+noRepeatedBlocks true
+noUserInfo true
+forbidWord "acme"
+forbidWord "Delhi"
